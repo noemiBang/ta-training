@@ -4,6 +4,7 @@
       slot="action"
       :to="{ name: 'songs-create' }"
       class="cyan accent-2"
+      id="add-song"
       light
       medium
       absolute
