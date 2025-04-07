@@ -2,52 +2,46 @@
   <panel title="Songs">
     <v-btn
       slot="action"
-      :to="{ name: 'songs-create' }"
+      :to="{
+        name: 'songs-create',
+      }"
       class="cyan accent-2"
       id="add-song"
+      data-test-id="createSongLink"
       light
       medium
       absolute
       right
       middle
-      fab>
+      fab
+    >
       <v-icon>add</v-icon>
     </v-btn>
 
-    <div 
-      v-for="song in songs"
-      class="song"
-      :key="song.id">
-
+    <div v-for="song in songs" class="song" :key="song.id">
       <v-layout>
         <v-flex xs6>
-          <div class="song-title">
+          <div class="song-title" data-test-id="songTitle">
             {{ song.title }}
           </div>
-          <div class="song-artist">
+          <div class="song-artist" data-test-id="songArtist">
             {{ song.artist }}
           </div>
-          <div class="song-genre">
+          <div class="song-genre" data-test-id="songGenre">
             {{ song.genre }}
           </div>
 
           <v-btn
             dark
             class="cyan"
-            @click="viewSong(song.id, false)">
+            :to="{
+              name: 'song',
+              params: {
+                songId: song.id,
+              },
+            }"
+          >
             View
-          </v-btn>
-          <v-btn
-            dark
-            class="cyan"
-            @click="viewSong(song.id, true)">
-            View in new tab
-          </v-btn>
-          <v-btn
-            dark
-            class="cyan"
-            @click="viewSong(song.id, false, true)">
-            View in new window
           </v-btn>
         </v-flex>
 
@@ -65,7 +59,7 @@ import SongsService from '@/services/SongsService'
 export default {
   data() {
     return {
-      songs: null
+      songs: null,
     }
   },
   watch: {
@@ -73,25 +67,9 @@ export default {
       immediate: true,
       async handler(value) {
         this.songs = (await SongsService.index(value)).data
-      }
-    }
+      },
+    },
   },
-  methods: {
-    viewSong(songId, newTab, newWindow) {
-      const route = { name: 'song', params: { songId } };
-      const resolvedRoute = this.$router.resolve(route).href;
-
-      if (newTab) {
-        window.open(resolvedRoute, '_blank');
-      }
-      if (newWindow) 
-      {
-        window.open(resolvedRoute, '_blank', 'menubar=no,toolbar=no,location=no,status=no');
-      } else {
-        this.$router.push(route);
-      }
-    }
-  }
 }
 </script>
 

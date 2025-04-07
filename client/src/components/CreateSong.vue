@@ -3,6 +3,7 @@
     <v-flex xs4>
       <panel title="Song Metadata">
         <v-text-field
+          data-test-id="newSongTitle"
           label="Title"
           required
           :rules="[required]"
@@ -11,6 +12,7 @@
         ></v-text-field>
 
         <v-text-field
+          data-test-id="newSongArtist"
           label="Artist"
           required
           :rules="[required]"
@@ -19,6 +21,7 @@
         ></v-text-field>
 
         <v-text-field
+          data-test-id="newSongGenre"
           label="Genre"
           required
           :rules="[required]"
@@ -27,6 +30,7 @@
         ></v-text-field>
 
         <v-text-field
+          data-test-id="newSongAlbum"
           label="Album"
           required
           :rules="[required]"
@@ -35,6 +39,7 @@
         ></v-text-field>
 
         <v-text-field
+          data-test-id="newSongAlbumImageUrl"
           label="Album Image Url"
           required
           :rules="[required]"
@@ -43,6 +48,7 @@
         ></v-text-field>
 
         <v-text-field
+          data-test-id="newSongYouTubeId"
           label="YouTube ID"
           required
           :rules="[required]"
@@ -55,6 +61,7 @@
     <v-flex xs8>
       <panel title="Song Structure" class="ml-2">
         <v-text-field
+          data-test-id="newSongStructure"
           label="Tab"
           multi-line
           required
@@ -65,39 +72,20 @@
 
         <v-text-field
           label="Lyrics"
+          data-test-id="newSongLyrics"
           multi-line
           required
           :rules="[required]"
           v-model="song.lyrics"
           id="sngLyrics"
         ></v-text-field>
-        <v-btn
-          dark
-          class="cyan"
-          id="sngBtn"
-          @click="onPickFile">
-          Upload lyrics
-        </v-btn>
-        <input
-          type="file"
-          style="display: none"
-          ref="fileInput"
-          accept=".txt"
-          @change="onFilePicked"
-      />
       </panel>
 
       <div class="danger-alert" v-if="error">
-        {{error}}
+        {{ error }}
       </div>
 
-      <v-btn
-        dark
-        class="cyan"
-        id="sngBtn"
-        @click="create">
-        Create Song
-      </v-btn>
+      <v-btn dark class="cyan" id="sngBtn" @click="create" data-test-id="createSong"> Create Song </v-btn>
     </v-flex>
   </v-layout>
 </template>
@@ -106,7 +94,7 @@
 import SongsService from '@/services/SongsService'
 
 export default {
-  data () {
+  data() {
     return {
       song: {
         title: null,
@@ -116,18 +104,16 @@ export default {
         albumImageUrl: null,
         youtubeId: null,
         lyrics: null,
-        tab: null
+        tab: null,
       },
       error: null,
-      required: (value) => !!value || 'Required.'
+      required: value => !!value || 'Required.',
     }
   },
   methods: {
-    async create () {
+    async create() {
       this.error = null
-      const areAllFieldsFilledIn = Object
-        .keys(this.song)
-        .every(key => !!this.song[key])
+      const areAllFieldsFilledIn = Object.keys(this.song).every(key => !!this.song[key])
       if (!areAllFieldsFilledIn) {
         this.error = 'Please fill in all the required fields.'
         return
@@ -136,26 +122,14 @@ export default {
       try {
         await SongsService.post(this.song)
         this.$router.push({
-          name: 'songs'
+          name: 'songs',
         })
       } catch (err) {
         console.log(err)
       }
     },
-    onPickFile () {
-      this.$refs.fileInput.click()
-    },
-    onFilePicked (event) {
-      const files = event.target.files
-      const fileReader = new FileReader()
-      fileReader.addEventListener('load', () => {
-        this.song.lyrics = fileReader.result;
-      })
-      fileReader.readAsText(files[0])
-    }
-  }
+  },
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
