@@ -1,0 +1,300 @@
+{
+  "id": "f161bb6d-77e6-49b0-aa99-ce34cedac356",
+  "version": "2.0",
+  "name": "TabTracker",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "63914d28-ce8e-475f-909a-15b6b11a72b6",
+    "name": "Create Song",
+    "commands": [{
+      "id": "08269863-d13a-4cfc-9fdc-5b3045b78852",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc2bdea2-cc3f-4389-a187-1cf54ff5fca0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1600x1002",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53e248c5-f21f-4317-90e8-88e230f4de44",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#add-song > .btn__content",
+      "targets": [
+        ["css=#add-song > .btn__content", "css:finder"],
+        ["xpath=//a[@id='add-song']/div", "xpath:idRelative"],
+        ["xpath=//nav/div/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "739de469-d14d-4fae-ba74-9561fe9a3c39",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#add-song > .btn__content",
+      "targets": [
+        ["css=#add-song > .btn__content", "css:finder"],
+        ["xpath=//a[@id='add-song']/div", "xpath:idRelative"],
+        ["xpath=//nav/div/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "914dcd47-2c68-4f81-a33e-b62bd1a3d9f9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#add-song > .btn__content",
+      "targets": [
+        ["css=#add-song > .btn__content", "css:finder"],
+        ["xpath=//a[@id='add-song']/div", "xpath:idRelative"],
+        ["xpath=//nav/div/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "451eef4c-edc8-4099-a6fc-ebe3a39f98ad",
+      "comment": "",
+      "command": "click",
+      "target": "id=sngTitle",
+      "targets": [
+        ["id=sngTitle", "id"],
+        ["css=#sngTitle", "css:finder"],
+        ["xpath=//input[@id='sngTitle']", "xpath:attributes"],
+        ["xpath=//div[@id='abId0.6414038796442447']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e396419-a220-49a7-b491-b59ded8fcd75",
+      "comment": "",
+      "command": "type",
+      "target": "id=sngTitle",
+      "targets": [
+        ["id=sngTitle", "id"],
+        ["css=#sngTitle", "css:finder"],
+        ["xpath=//input[@id='sngTitle']", "xpath:attributes"],
+        ["xpath=//div[@id='abId0.6414038796442447']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Nevermind"
+    }, {
+      "id": "0023d1ae-8a38-4161-bc2c-401c5b0d4d9e",
+      "comment": "",
+      "command": "click",
+      "target": "id=sngArtist",
+      "targets": [
+        ["id=sngArtist", "id"],
+        ["css=#sngArtist", "css:finder"],
+        ["xpath=//input[@id='sngArtist']", "xpath:attributes"],
+        ["xpath=//div[@id='abId0.6237391936905812']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e8a0d55-8595-41e0-87e5-55d93fc2d34c",
+      "comment": "",
+      "command": "type",
+      "target": "id=sngArtist",
+      "targets": [
+        ["id=sngArtist", "id"],
+        ["css=#sngArtist", "css:finder"],
+        ["xpath=//input[@id='sngArtist']", "xpath:attributes"],
+        ["xpath=//div[@id='abId0.6237391936905812']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Nirvana"
+    }, {
+      "id": "fb939f19-f174-4c70-b2c1-a8c748042a3d",
+      "comment": "",
+      "command": "click",
+      "target": "id=sngGenre",
+      "targets": [
+        ["id=sngGenre", "id"],
+        ["css=#sngGenre", "css:finder"],
+        ["xpath=//input[@id='sngGenre']", "xpath:attributes"],
+        ["xpath=//div[@id='abId0.21597865708315322']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60f4cf31-c808-41b8-805b-cd0b54fecd1f",
+      "comment": "",
+      "command": "type",
+      "target": "id=sngGenre",
+      "targets": [
+        ["id=sngGenre", "id"],
+        ["css=#sngGenre", "css:finder"],
+        ["xpath=//input[@id='sngGenre']", "xpath:attributes"],
+        ["xpath=//div[@id='abId0.21597865708315322']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "Alternative Rock"
+    }, {
+      "id": "9e9bb7d5-a5f4-48c6-8b84-64b5b74c8e07",
+      "comment": "",
+      "command": "click",
+      "target": "id=sngAlbum",
+      "targets": [
+        ["id=sngAlbum", "id"],
+        ["css=#sngAlbum", "css:finder"],
+        ["xpath=//input[@id='sngAlbum']", "xpath:attributes"],
+        ["xpath=//div[@id='abId0.6493793341555523']/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b016267-5afd-4f39-9da3-606bed3f311c",
+      "comment": "",
+      "command": "type",
+      "target": "id=sngAlbum",
+      "targets": [
+        ["id=sngAlbum", "id"],
+        ["css=#sngAlbum", "css:finder"],
+        ["xpath=//input[@id='sngAlbum']", "xpath:attributes"],
+        ["xpath=//div[@id='abId0.6493793341555523']/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "Nevermind"
+    }, {
+      "id": "ac38f153-2b24-4982-8302-4e1146806dc8",
+      "comment": "",
+      "command": "click",
+      "target": "id=sngAlbumImg",
+      "targets": [
+        ["id=sngAlbumImg", "id"],
+        ["css=#sngAlbumImg", "css:finder"],
+        ["xpath=//input[@id='sngAlbumImg']", "xpath:attributes"],
+        ["xpath=//div[@id='abId0.4134363949345201']/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "800d4b61-ff46-42c0-9a8a-b389a797b641",
+      "comment": "",
+      "command": "click",
+      "target": "id=sngAlbumImg",
+      "targets": [
+        ["id=sngAlbumImg", "id"],
+        ["css=#sngAlbumImg", "css:finder"],
+        ["xpath=//input[@id='sngAlbumImg']", "xpath:attributes"],
+        ["xpath=//div[@id='abId0.4134363949345201']/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "76f98c9c-71e9-4ca8-8306-f45d908ee043",
+      "comment": "",
+      "command": "type",
+      "target": "id=sngAlbumImg",
+      "targets": [
+        ["id=sngAlbumImg", "id"],
+        ["css=#sngAlbumImg", "css:finder"],
+        ["xpath=//input[@id='sngAlbumImg']", "xpath:attributes"],
+        ["xpath=//div[@id='abId0.4134363949345201']/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": "https://is3-ssl.mzstatic.com/image/thumb/Features/d0/cc/62/dj.nanioukp.jpg/268x0w.jpg"
+    }, {
+      "id": "46e4b41c-b69e-4660-bad7-a7aed2d1a509",
+      "comment": "",
+      "command": "click",
+      "target": "id=sngYoutube",
+      "targets": [
+        ["id=sngYoutube", "id"],
+        ["css=#sngYoutube", "css:finder"],
+        ["xpath=//input[@id='sngYoutube']", "xpath:attributes"],
+        ["xpath=//div[@id='abId0.4590223093906758']/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4325b680-ec19-421c-b89f-a701736026c1",
+      "comment": "",
+      "command": "type",
+      "target": "id=sngYoutube",
+      "targets": [
+        ["id=sngYoutube", "id"],
+        ["css=#sngYoutube", "css:finder"],
+        ["xpath=//input[@id='sngYoutube']", "xpath:attributes"],
+        ["xpath=//div[@id='abId0.4590223093906758']/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/input", "xpath:position"]
+      ],
+      "value": "m-ofL_3EZyE"
+    }, {
+      "id": "65c2cf43-246c-4132-bddd-5dbf250ea345",
+      "comment": "",
+      "command": "click",
+      "target": "id=sngTab",
+      "targets": [
+        ["id=sngTab", "id"],
+        ["css=#sngTab", "css:finder"],
+        ["xpath=//textarea[@id='sngTab']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/main/div/div/div[2]/div/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b50309ab-0e5d-4cce-92f9-a3efc4cb5bd2",
+      "comment": "",
+      "command": "type",
+      "target": "id=sngTab",
+      "targets": [
+        ["id=sngTab", "id"],
+        ["css=#sngTab", "css:finder"],
+        ["xpath=//textarea[@id='sngTab']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/main/div/div/div[2]/div/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "-"
+    }, {
+      "id": "8d7a63a5-354b-4a0f-b4d4-06ec0871e46a",
+      "comment": "",
+      "command": "click",
+      "target": "id=sngLyrics",
+      "targets": [
+        ["id=sngLyrics", "id"],
+        ["css=#sngLyrics", "css:finder"],
+        ["xpath=//textarea[@id='sngLyrics']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/main/div/div/div[2]/div/div/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//div[2]/div/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2351c37-77d0-4bbc-82cb-f7a89cc9e9c6",
+      "comment": "",
+      "command": "type",
+      "target": "id=sngLyrics",
+      "targets": [
+        ["id=sngLyrics", "id"],
+        ["css=#sngLyrics", "css:finder"],
+        ["xpath=//textarea[@id='sngLyrics']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/main/div/div/div[2]/div/div/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//div[2]/div/textarea", "xpath:position"]
+      ],
+      "value": "-"
+    }, {
+      "id": "cef1ee21-69d6-49f4-9336-a09cc78309ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.flex > #sngBtn > .btn__content",
+      "targets": [
+        ["css=.flex > #sngBtn > .btn__content", "css:finder"],
+        ["xpath=(//button[@id='sngBtn']/div)[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5867bb9f-2bd6-4b11-8262-630cae8ecc56",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["63914d28-ce8e-475f-909a-15b6b11a72b6"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
