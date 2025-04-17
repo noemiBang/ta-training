@@ -3,5 +3,6 @@
         "cicd",
         "CICD",
         "specfile"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
